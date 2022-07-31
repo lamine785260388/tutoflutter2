@@ -1,1 +1,9 @@
 build bottomcolumn pour creer des column
+images on modifies pubsec.yaml en ajoutant dans l'url de notre image
+-ajouter image:
+  Image.asset(
+                'images/pizza.jpg',
+                width: 600,
+                height: 240,
+                fit: BoxFit.cover,
+              ),

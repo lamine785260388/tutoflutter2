@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:transparent_image/transparent_image.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -53,11 +54,12 @@ class MyApp extends StatelessWidget {
     Widget descriptionSection = Container(
       padding: const EdgeInsets.all(32),
       child: Text(
-        "Faire cuire de leau dans une poele et les champignons poele ppour pouvoir bien le déguster",
+        "Faire cuire de leau  une poele et les champignons poele Faire cuire de leau dans une poele et les champignons poele ",
         softWrap: true,
       ),
     );
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -79,9 +81,17 @@ class MyApp extends StatelessWidget {
           ),
           body: Column(
             children: [
+              FadeInImage.assetNetwork(
+                placeholder: 'images/loader.png',
+                image:
+                    'https://img.cuisineaz.com/660x660/2013/12/20/i95731-pizza-royale.jpg',
+                width: 600,
+                height: 240,
+                fit: BoxFit.cover,
+              ),
               titleSection,
               buttonSection,
-              descriptionSection,
+              descriptionSection
             ],
           )),
     );
