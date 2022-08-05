@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/favoritWidget.dart';
 
 class RecipScreen extends StatelessWidget {
   const RecipScreen({
@@ -30,11 +31,10 @@ class RecipScreen extends StatelessWidget {
                     ))
               ],
             )),
-            Icon(
-              Icons.favorite,
-              color: Colors.red,
+            FavoriteWidget(
+              isFavorited: true,
+              favoriteCount: 55,
             ),
-            Text("55"),
           ],
         ));
     Widget buttonSection = Container(
