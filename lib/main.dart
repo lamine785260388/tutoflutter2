@@ -80,13 +80,20 @@ class MyApp extends StatelessWidget {
           ),
           body: Column(
             children: [
-              FadeInImage.assetNetwork(
-                placeholder: 'images/loader.png',
-                image:
-                    'https://img.cuisineaz.com/660x660/2013/12/20/i95731-pizza-royale.jpg',
-                width: 600,
-                height: 240,
-                fit: BoxFit.cover,
+              Stack(
+                children: [
+                  Container(
+                    width: 600,
+                    height: 240,
+                    child: Center(child: CircularProgressIndicator()),
+                  ),
+                  Image.asset(
+                    'images/pizza2.jpg',
+                    width: 600,
+                    height: 240,
+                    fit: BoxFit.cover,
+                  ),
+                ],
               ),
               titleSection,
               buttonSection,
