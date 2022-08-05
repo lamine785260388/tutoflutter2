@@ -1,5 +1,5 @@
 build bottomcolumn pour creer des column
-images on modifies pubsec.yaml en ajoutant dans l'url de notre image
+images on modifies pubsec.yaml en ajoutant dans asset  l'url de notre image
 -ajouter image:
   Image.asset(
                 'images/pizza.jpg',
